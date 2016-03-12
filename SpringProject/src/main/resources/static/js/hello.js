@@ -28,11 +28,10 @@ angular.module('hello', [ 'ngRoute' ])
       self.greeting = data;
     });
   })
-});
+})
  
-  .controller('navigation',
-
-  function($rootScope, $http, $location) {
+  .controller('navigation', 
+		  function($rootScope, $http, $location) {
 
   var self = this
 
@@ -68,7 +67,7 @@ angular.module('hello', [ 'ngRoute' ])
           self.error = true;
         }
       });
-  };
+  }
   
   self.logout = function() {
 	  $http.post('logout', {}).finally(function() {
